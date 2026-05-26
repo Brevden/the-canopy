@@ -15,8 +15,9 @@ import Layout from '../layouts/Layout.astro';
         <span class="font-display font-semibold text-forest-900 text-lg tracking-tight">Canopy</span>
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-500">
+        <a href="#why" class="hover:text-forest-700 transition-colors">Why</a>
+        <a href="#what" class="hover:text-forest-700 transition-colors">What it is</a>
         <a href="#how-it-works" class="hover:text-forest-700 transition-colors">How it works</a>
-        <a href="#the-mesh" class="hover:text-forest-700 transition-colors">The mesh</a>
         <a href="https://github.com/Brevden" class="hover:text-forest-700 transition-colors">GitHub</a>
         <a href="https://mastodon.social/@the_canopy" class="inline-flex items-center gap-1.5 bg-forest-900 text-cream px-4 py-1.5 rounded-full hover:bg-forest-700 transition-colors">
           Follow
@@ -28,7 +29,6 @@ import Layout from '../layouts/Layout.astro';
   <main>
     <!-- ═══════════════════════════════════════════════════════ HERO -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <!-- Botanical background -->
       <div class="absolute inset-0 pointer-events-none select-none">
         <svg class="absolute top-0 right-0 w-[700px] h-[700px] opacity-[0.055] translate-x-1/4 -translate-y-1/4" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="280" cy="260" r="180" fill="#2d6b52"/>
@@ -56,124 +56,212 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <h1 class="font-display text-5xl md:text-7xl font-bold text-forest-900 leading-[1.08] tracking-tight">
-          Your home.<br />Your people.<br />
-          <span class="text-forest-600 italic">Your data.</span>
+          Does the internet feel<br />
+          <span class="text-forest-600 italic">a bit weird right now?</span>
         </h1>
 
-        <p class="mt-8 text-lg md:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
-          Canopy is a home server platform built around the people who live in your home.
-          Your films, your music, your household life — on your own hardware,
-          accessible wherever you go, in nobody's hands but yours.
+        <p class="mt-8 text-xl md:text-2xl text-stone-500 max-w-xl mx-auto leading-relaxed font-display italic">
+          You're not imagining it.
         </p>
 
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#story" class="inline-flex items-center gap-2 bg-forest-700 text-cream px-7 py-3.5 rounded-full font-medium hover:bg-forest-600 transition-colors shadow-sm">
-            See how it works
+        <div class="mt-10">
+          <a href="#why" class="inline-flex items-center gap-2 text-forest-700 font-medium hover:text-forest-500 transition-colors">
+            Read on
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </a>
-          <a href="https://github.com/Brevden" class="inline-flex items-center gap-2 text-stone-600 px-7 py-3.5 rounded-full font-medium hover:text-forest-700 transition-colors border border-stone-300 hover:border-forest-300">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════════ WHY -->
-    <section class="py-28 px-6 bg-forest-950">
-      <div class="max-w-3xl mx-auto">
-        <p class="text-forest-500 text-sm font-medium uppercase tracking-widest mb-10">Why Canopy exists</p>
+    <!-- ════════════════════════════════════════════════════════ WHY -->
+    <section id="why" class="bg-forest-950 py-28 px-6">
+      <div class="max-w-3xl mx-auto space-y-20">
 
-        <div class="space-y-8 text-forest-300/80 leading-[1.85] text-[1.05rem] font-display">
+        <!-- Act 1: The feeling -->
+        <div class="space-y-7 font-display text-[1.1rem] leading-[1.85] text-forest-300/75">
           <p>
-            The internet used to feel like it belonged to people. You'd stumble across a stranger's homepage about their train collection,
-            or a forum where people just helped each other with things. It was weird and generous and human.
+            Most people feel it. A vague unease they can't quite name. You open your phone to check
+            one thing and forty minutes have gone. You see an ad for something you only mentioned in
+            passing. You scroll through content you didn't ask for and feel vaguely worse afterwards.
+            You share a photo with friends and it ends up somewhere you didn't quite intend.
           </p>
           <p>
-            That feeling is mostly gone. The spaces we share now are owned by companies whose business model is to keep us engaged,
-            harvest what they learn about us, and sell it. Our conversations, our relationships, our taste in music, our arguments —
-            all of it is raw material for someone else's profit. The platforms don't mediate our lives because they care about us.
-            They mediate our lives because attention is the product.
-          </p>
-          <p class="text-forest-200">We've handed over something important without quite noticing.</p>
-        </div>
-
-        <!-- The carnival -->
-        <div class="my-14 border-l-2 border-forest-600 pl-8">
-          <p class="font-display italic text-cream text-xl md:text-2xl leading-[1.65]">
-            Imagine you upload your holiday pictures to Facebook so your friends can see them together.
-            What you've actually done is taken your pictures and put them in a giant warehouse inside a carnival —
-            a carnival full of algorithmically targeted attractions, engineered to distract and keep people inside
-            as long as possible. Your friends have to wade through a stream of personalised, emotionally calibrated content
-            just to get to your photos.
-          </p>
-          <p class="font-display italic text-forest-400 text-xl md:text-2xl leading-[1.65] mt-6">
-            Your holiday pictures didn't belong in that warehouse. They're your pictures, and your friends
-            should see them in your house — metaphorically, and with Canopy, literally.
+            Nothing dramatic. Just a persistent, low-level feeling that something's a bit off.
+            That the internet — which was supposed to be useful, connecting, freeing — has become
+            something you do to yourself rather than something you use.
           </p>
         </div>
 
-        <div class="space-y-8 text-forest-300/80 leading-[1.85] text-[1.05rem] font-display">
+        <!-- Act 2: The explanation -->
+        <div class="space-y-7 font-display text-[1.1rem] leading-[1.85] text-forest-200/85">
           <p>
-            Your home already has a router, a hard drive, a screen. It already stores your photos, your films, your music.
-            What it's missing is software that makes those things properly yours — accessible from anywhere, shareable with
-            people you actually trust, not contingent on any platform's continued existence or goodwill.
+            It's not an accident. The platforms you use every day are built by some of the smartest
+            engineers in the world, with one goal: keep you there as long as possible. Every scroll,
+            every like, every moment of hesitation is a data point. That data gets fed back into a
+            system that learns, adjusts, and gets better at keeping your attention.
           </p>
           <p>
-            But self-hosting as it exists today requires real knowledge, real time, and real tolerance for things breaking.
-            Digital sovereignty shouldn't be a privilege reserved for people who already know what a reverse proxy is.
-            A person who just wants to stream their own films and share a recipe with their mum shouldn't have to learn
-            Linux networking to do it.
+            Your attention is worth money. Not to you — to them. And the longer you stay, the more
+            they learn, the more precisely they can target you, and the more they can charge advertisers
+            for access to you.
           </p>
-          <p>
-            And self-sufficiency alone misses something. The most natural thing in the world is to share — a music collection,
-            a film library, a household calendar with a relative on another node. None of that requires a platform.
-            It just requires the pipes to connect people directly, without a middleman taking a cut of their attention.
+          <p class="text-cream font-semibold">
+            You're not using the internet. The internet is using you.
           </p>
         </div>
 
-        <div class="mt-14 pt-10 border-t border-forest-800">
-          <p class="font-display italic text-forest-400 text-lg leading-relaxed max-w-2xl">
-            Solarpunk imagines futures where technology serves communities rather than extracting from them.
-            Canopy is a practical attempt at that, in a narrow domain. If it makes it easier for ordinary people
-            to own their media, communicate without being surveilled, and share with friends on their own terms —
-            that's worth doing.
+        <!-- Act 3: What it means -->
+        <div class="space-y-7 font-display text-[1.1rem] leading-[1.85] text-forest-100/90">
+          <p>
+            Here's what that looks like in practice. When you upload a photo to share with friends,
+            you hand it to a corporation that owns the right to use it however they see fit, and will
+            use it to serve you more targeted content. When you message someone you love, a company
+            logs it. When you discover an album you adore, an algorithm decides what you hear next —
+            not because it has taste, but because it has a model of what keeps you subscribed.
+          </p>
+          <p>
+            The internet — the actual internet, the open network built on the idea that people should
+            be able to connect freely — has been replaced by four or five companies that sit between
+            you and everyone else. They're not the internet. They built a fence around part of it,
+            called it the internet, and charged you your attention and your data to get in.
+          </p>
+          <p>
+            And they did it gradually enough that nobody quite noticed until it was done.
           </p>
         </div>
+
+        <!-- Act 4: The fury -->
+        <div class="space-y-8">
+          <div class="space-y-3 font-display text-cream text-xl md:text-2xl leading-relaxed">
+            <p>What you watch late at night.</p>
+            <p>Who you talk to. What you argue about.</p>
+            <p>What music makes you feel something.</p>
+            <p>What you're worried about. What you believe.</p>
+            <p>Who you are.</p>
+          </div>
+
+          <div class="pt-4">
+            <p class="font-display font-bold text-cream text-3xl md:text-5xl leading-tight">
+              None of that is their business.
+            </p>
+            <p class="font-display italic text-forest-400 text-2xl md:text-3xl leading-tight mt-3">
+              None of it. They didn't build the internet.<br />They just built a fence around part of it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Act 5: The turn -->
+        <div class="pt-6 border-t border-forest-800 space-y-7 font-display text-[1.1rem] leading-[1.85]">
+          <p class="text-forest-300/80">
+            The good news — and there is good news — is that the actual internet still exists.
+            The technology that lets two computers talk to each other directly, without a company
+            in the middle, still works exactly as it always did. The pipes are still there.
+          </p>
+          <p class="text-forest-200/90">
+            What's been missing is software that makes it easy. Software that lets ordinary people
+            own their own corner of the internet, connect directly with the people they trust, and
+            share what they love without asking anyone's permission.
+          </p>
+          <p class="text-cream font-semibold text-xl">
+            That's what we built.<br />Let's take it back.
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════ STORY -->
-    <section id="story" class="py-28 px-6">
+    <!-- ════════════════════════════════════════════════ WHAT IT IS -->
+    <section id="what" class="py-28 px-6">
       <div class="max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="text-center mb-20">
+          <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">The solution</p>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight max-w-3xl mx-auto">
+            Your home. Your hardware. Your network. <em>Your rules.</em>
+          </h2>
+          <p class="mt-6 text-stone-500 max-w-2xl mx-auto leading-relaxed text-lg">
+            Canopy turns your home computer into a personal server — your media, your household life,
+            and a direct encrypted connection to the people you actually trust. No platform in the middle.
+            No third party with their hands in your data. No terms of service that change without warning.
+          </p>
+        </div>
+
+        <!-- The mesh / trust network -->
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
-            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">A home that travels with you</p>
-            <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight mb-8">
-              Everything at home. <em>Everywhere.</em>
-            </h2>
+            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">A trust-based network</p>
+            <h3 class="font-display text-3xl md:text-4xl font-semibold text-forest-900 leading-tight mb-7">
+              Good things spread through people,<br /><em>not platforms.</em>
+            </h3>
             <div class="space-y-5 text-stone-600 leading-relaxed text-[1.05rem]">
               <p>
-                Jessica has Canopy installed at home. She hosts her own films on Jellyfin,
-                her music on Navidrome, and her documents on Nextcloud — all running on her own hardware,
-                on her own hard drive.
+                Damien discovers an album. Plays it on repeat all week. Jessica, whose Canopy is
+                connected to Damien's, can see what he's been listening to — not because an algorithm
+                served it to her, but because Damien genuinely loves it.
               </p>
               <p>
-                When she leaves the house, her phone stays connected to her Atrium over WireGuard.
-                She can stream her films on the train, check the household calendar, and read messages
-                left on the noticeboard. No extra setup. No VPN to configure. No port forwarding.
+                She listens. Loves it. Her friend on another node sees it in her stream. And so it
+                spreads — person to person, carried entirely by real enthusiasm, with no platform
+                deciding who sees what and no feed engineered to keep you scrolling.
+              </p>
+              <p>
+                This is how culture used to travel. Word of mouth, at the speed of trust.
+                Six degrees of separation — if something is genuinely good, it doesn't need
+                a platform to go viral. It just needs people willing to pass it on.
               </p>
               <p class="text-forest-800 font-medium">
-                This is how Canopy works by default. Connectivity isn't a feature you configure —
-                it's simply how your Atrium behaves.
+                Canopy provides the pipes. You provide the taste.
               </p>
             </div>
           </div>
 
-          <!-- GUI mockup -->
-          <div class="relative">
+          <!-- Mesh diagram -->
+          <div class="bg-parchment/60 rounded-3xl p-8 border border-forest-100">
+            <svg viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+              <line x1="130" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
+              <line x1="350" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
+              <line x1="130" y1="110" x2="350" y2="110" stroke="#2d6b52" stroke-width="2" opacity="0.7"/>
+              <line x1="130" y1="110" x2="60" y2="220" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+              <line x1="130" y1="110" x2="160" y2="235" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+              <line x1="350" y1="110" x2="415" y2="218" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+              <circle cx="240" cy="36" r="16" fill="#f0ebe0" stroke="#8ec3a9" stroke-width="1.5"/>
+              <text x="240" y="40" text-anchor="middle" font-size="8" fill="#3c8769" font-family="Inter, system-ui" font-weight="500">coord</text>
+              <circle cx="130" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
+              <text x="130" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Jessica</text>
+              <text x="130" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
+              <circle cx="350" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
+              <text x="350" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Damien</text>
+              <text x="350" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
+              <circle cx="60" cy="225" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+              <text x="60" y="229" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
+              <circle cx="165" cy="238" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+              <text x="165" y="242" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Laptop</text>
+              <circle cx="418" cy="222" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+              <text x="418" y="226" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
+              <text x="240" y="100" text-anchor="middle" font-size="8" fill="#5fa385" font-family="Inter, system-ui" opacity="0.9">wg-mesh</text>
+              <text x="85" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
+              <text x="395" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
+            </svg>
+            <div class="mt-4 flex flex-wrap gap-4 justify-center text-xs text-stone-500">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-0.5 bg-forest-600"></div>
+                <span>Node mesh (WireGuard)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-0.5 bg-forest-400"></div>
+                <span>Your devices</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-5 border-t border-dashed border-forest-300"></div>
+                <span>Coordination server</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Your media, everywhere -->
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="relative order-2 lg:order-1">
             <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-forest-900/15 border border-stone-200/80 aspect-[4/3]">
-              <!-- Top bar (browser/OS chrome) -->
               <div class="bg-stone-200 px-4 py-2.5 flex items-center gap-2">
                 <div class="flex gap-1.5">
                   <div class="w-3 h-3 rounded-full bg-red-400/60"></div>
@@ -182,9 +270,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 <div class="flex-1 mx-4 bg-white/60 rounded text-[10px] text-stone-400 px-3 py-1 text-center">atrium.home.canopy</div>
               </div>
-              <!-- GUI interior -->
               <div class="flex h-full bg-gradient-to-br from-stone-50 to-amber-50/30">
-                <!-- Sidebar -->
                 <div class="w-[28%] bg-stone-900 flex flex-col py-3 px-2">
                   <div class="px-3 pb-3 mb-2 border-b border-stone-800">
                     <div class="flex items-center gap-2">
@@ -213,7 +299,6 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                   </div>
                 </div>
-                <!-- Content -->
                 <div class="flex-1 p-4">
                   <p class="text-stone-400 text-[9px] uppercase tracking-widest mb-3 font-medium">Running Services</p>
                   <div class="grid grid-cols-2 gap-2">
@@ -236,12 +321,33 @@ import Layout from '../layouts/Layout.astro';
                 </div>
               </div>
             </div>
-            <!-- Floating badge -->
             <div class="absolute -bottom-4 -right-4 bg-forest-700 text-cream text-xs px-4 py-2.5 rounded-xl shadow-lg font-medium">
               <div class="flex items-center gap-2">
                 <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                 Accessible from anywhere
               </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">Own your media</p>
+            <h3 class="font-display text-3xl md:text-4xl font-semibold text-forest-900 leading-tight mb-7">
+              Your films. Your music. On your hardware. <em>Wherever you are.</em>
+            </h3>
+            <div class="space-y-5 text-stone-600 leading-relaxed text-[1.05rem]">
+              <p>
+                Jessica has her films on Jellyfin, her music on Navidrome, her files on Nextcloud —
+                all running on her own hardware, on her own hard drive. No subscription. No licensing deal
+                that can expire. No "this content isn't available in your region."
+              </p>
+              <p>
+                When she leaves the house, her phone stays connected to her Atrium over an encrypted
+                tunnel. She can stream her films on the train, check the household calendar, read messages
+                left on the noticeboard. No VPN to configure. No port forwarding. Just connected.
+              </p>
+              <p class="text-forest-800 font-medium">
+                No dependence on third-party companies. No one else's servers between you and your own stuff.
+              </p>
             </div>
           </div>
         </div>
@@ -252,17 +358,16 @@ import Layout from '../layouts/Layout.astro';
     <section class="py-24 px-6 bg-parchment/50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">What lives on your Atrium</p>
+          <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">What you get</p>
           <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight">
             Everything your household needs
           </h2>
           <p class="mt-4 text-stone-500 max-w-xl mx-auto">
-            Some features are built directly into the Atrium. Others run as containers you manage yourself. Both feel like home.
+            Some features are built directly into the Atrium. Others run as containers you manage yourself. Both are yours, completely.
           </p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8">
-          <!-- Atrium-native -->
           <div class="bg-cream rounded-3xl p-8 border border-forest-100">
             <div class="flex items-center gap-3 mb-6">
               <div class="w-9 h-9 rounded-xl bg-forest-100 flex items-center justify-center">
@@ -286,7 +391,7 @@ import Layout from '../layouts/Layout.astro';
                 {
                   icon: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
                   name: 'Shared calendar',
-                  desc: 'Your household\'s schedule, visible to everyone at home — and shareable with friends on connected Atriums.',
+                  desc: 'Your household\'s schedule, visible to everyone at home — and shareable with friends on connected Atriums. No Google required.',
                 },
                 {
                   icon: `<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>`,
@@ -296,7 +401,7 @@ import Layout from '../layouts/Layout.astro';
                 {
                   icon: `<polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>`,
                   name: 'Chores',
-                  desc: 'A lightweight shared task list. Assignees, due dates, recurring tasks. Surfaces on the dashboard so nothing gets missed.',
+                  desc: 'A shared task list. Assignees, due dates, recurring tasks. Surfaces on the dashboard so nothing gets missed.',
                 },
               ].map(f => (
                 <div class="flex gap-4">
@@ -312,7 +417,6 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Services -->
           <div class="bg-forest-900 rounded-3xl p-8 text-cream">
             <div class="flex items-center gap-3 mb-6">
               <div class="w-9 h-9 rounded-xl bg-forest-800 flex items-center justify-center">
@@ -339,7 +443,7 @@ import Layout from '../layouts/Layout.astro';
                 {
                   name: 'Music streaming',
                   app: 'Navidrome',
-                  desc: 'Your own music library — rips, purchases, whatever you own — streamable everywhere, exactly like Spotify but yours.',
+                  desc: 'Your own music library, streamable everywhere. And when connected to friends on the mesh, you can see what they\'ve been playing. The best recommendation engine is someone who actually knows you.',
                   tag: 'bg-blue-900/60 text-blue-300',
                 },
                 {
@@ -371,116 +475,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- ════════════════════════════════════════════════════════ MESH -->
-    <section id="the-mesh" class="py-28 px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Mesh diagram -->
-          <div class="order-2 lg:order-1">
-            <div class="bg-parchment/60 rounded-3xl p-8 border border-forest-100">
-              <svg viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-                <!-- Coordination server lines (dashed, faint) -->
-                <line x1="130" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
-                <line x1="350" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
-
-                <!-- Main mesh link (A ↔ B) -->
-                <line x1="130" y1="110" x2="350" y2="110" stroke="#2d6b52" stroke-width="2" opacity="0.7"/>
-
-                <!-- Device links from A -->
-                <line x1="130" y1="110" x2="60" y2="220" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
-                <line x1="130" y1="110" x2="160" y2="235" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
-
-                <!-- Device link from B -->
-                <line x1="350" y1="110" x2="415" y2="218" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
-
-                <!-- Coord server -->
-                <circle cx="240" cy="36" r="16" fill="#f0ebe0" stroke="#8ec3a9" stroke-width="1.5"/>
-                <text x="240" y="40" text-anchor="middle" font-size="8" fill="#3c8769" font-family="Inter, system-ui" font-weight="500">coord</text>
-
-                <!-- Node A: Jessica's Atrium -->
-                <circle cx="130" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
-                <text x="130" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Jessica</text>
-                <text x="130" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
-
-                <!-- Node B: Damien's Atrium -->
-                <circle cx="350" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
-                <text x="350" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Damien</text>
-                <text x="350" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
-
-                <!-- Jessica's devices -->
-                <circle cx="60" cy="225" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
-                <text x="60" y="229" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
-
-                <circle cx="165" cy="238" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
-                <text x="165" y="242" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Laptop</text>
-
-                <!-- Damien's device -->
-                <circle cx="418" cy="222" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
-                <text x="418" y="226" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
-
-                <!-- wg-mesh label -->
-                <text x="240" y="100" text-anchor="middle" font-size="8" fill="#5fa385" font-family="Inter, system-ui" opacity="0.9">wg-mesh</text>
-
-                <!-- wg-clients labels -->
-                <text x="85" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
-                <text x="395" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
-              </svg>
-
-              <div class="mt-4 flex flex-wrap gap-4 justify-center text-xs text-stone-500">
-                <div class="flex items-center gap-2">
-                  <div class="w-6 h-0.5 bg-forest-600"></div>
-                  <span>Node mesh (WireGuard)</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-6 h-0.5 bg-forest-400"></div>
-                  <span>Client devices</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="w-5 border-t border-dashed border-forest-300"></div>
-                  <span>Coordination server</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="order-1 lg:order-2">
-            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">The mesh</p>
-            <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight mb-8">
-              Connected to the people you choose.
-            </h2>
-            <div class="space-y-5 text-stone-600 leading-relaxed text-[1.05rem]">
-              <p>
-                Damien has his own Atrium, and a vast music collection. When Jessica adds him as a peer,
-                the two Atriums connect over an encrypted WireGuard mesh — directly, without any platform in the middle.
-              </p>
-              <p>
-                Damien can share parts of his music library with Jessica. Jessica can add Damien as a
-                user on her Jellyfin and he can watch her films. Each person decides what they share
-                and with whom.
-              </p>
-              <p class="text-forest-800 font-medium">
-                No servers you don't control. No permission to ask of anyone. Just a direct connection
-                between two homes, over an invite link sent through whatever channel you prefer.
-              </p>
-            </div>
-            <div class="mt-8 grid grid-cols-2 gap-4">
-              {[
-                { stat: 'One link', label: 'to invite a peer node' },
-                { stat: 'No NAT', label: 'traversal to configure' },
-                { stat: 'Encrypted', label: 'end-to-end, always' },
-                { stat: 'Direct', label: 'no Canopy servers in the path' },
-              ].map(s => (
-                <div class="bg-forest-50 rounded-2xl p-4 border border-forest-100">
-                  <p class="font-display font-semibold text-forest-900 text-lg">{s.stat}</p>
-                  <p class="text-stone-500 text-sm mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══════════════════════════════════════════════ HOW IT WORKS -->
     <section id="how-it-works" class="py-24 px-6 bg-forest-900">
       <div class="max-w-5xl mx-auto">
@@ -490,14 +484,12 @@ import Layout from '../layouts/Layout.astro';
             Built right, from the ground up
           </h2>
           <p class="mt-4 text-forest-300/70 max-w-xl mx-auto">
-            Every layer of Canopy was chosen for a reason. Security, reproducibility, and openness aren't afterthoughts — they're the foundation.
+            Every layer was chosen for a reason. Security, reproducibility, and openness aren't afterthoughts — they're the foundation.
           </p>
         </div>
 
         <div class="relative">
-          <!-- Connecting line -->
           <div class="absolute left-[calc(2rem+1px)] top-10 bottom-10 w-px bg-forest-700 hidden md:block"></div>
-
           <div class="space-y-10">
             {[
               {
@@ -518,17 +510,17 @@ import Layout from '../layouts/Layout.astro';
                 num: '3',
                 name: 'Rust Daemon',
                 role: 'System Layer',
-                desc: 'A Rust process that runs as root and handles all system-level operations: managing containers, configuring networking, executing system commands. It exposes a Unix socket. Nothing else touches the system.',
+                desc: 'A Rust process that handles all system-level operations: managing containers, configuring networking, executing system commands. It exposes a Unix socket. Nothing else touches the system.',
                 tag: 'Root · Unix socket',
               },
               {
                 num: '4',
                 name: 'Bun + TypeScript',
                 role: 'Management GUI',
-                desc: 'A web interface served by Bun, running as an unprivileged user. It communicates with the Daemon via the Unix socket. The code runs entirely on your machine — fully inspectable, fully customisable.',
+                desc: 'A web interface served by Bun, running as an unprivileged user. Communicates with the Daemon via Unix socket. The code runs entirely on your machine — fully inspectable, fully customisable.',
                 tag: 'Unprivileged · Customisable',
               },
-            ].map((layer, i) => (
+            ].map((layer) => (
               <div class="relative flex gap-6 md:gap-10">
                 <div class="relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-forest-800 border border-forest-700 flex items-center justify-center">
                   <span class="font-display font-bold text-forest-300 text-xl">{layer.num}</span>
@@ -566,8 +558,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="font-display font-semibold text-cream text-lg tracking-tight">Canopy</span>
           </div>
           <p class="text-forest-500 text-sm max-w-xs leading-relaxed">
-            A home server platform for the people you actually live with.
-            Open source. Community run.
+            Reclaim your internet. Open source. Community run. No dependence on anyone.
           </p>
         </div>
         <div class="flex flex-wrap gap-x-10 gap-y-4 text-sm">
