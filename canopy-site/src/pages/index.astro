@@ -1,0 +1,595 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- ═══════════════════════════════════════════════════════════ NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-cream/85 backdrop-blur-md border-b border-forest-100/60">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5 group">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-forest-600 group-hover:text-forest-500 transition-colors">
+          <path d="M12 3L6 10h12L12 3z"/>
+          <path d="M12 7L4 15h16L12 7z"/>
+          <rect x="10" y="15" width="4" height="5" rx="0.5"/>
+        </svg>
+        <span class="font-display font-semibold text-forest-900 text-lg tracking-tight">Canopy</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-500">
+        <a href="#how-it-works" class="hover:text-forest-700 transition-colors">How it works</a>
+        <a href="#the-mesh" class="hover:text-forest-700 transition-colors">The mesh</a>
+        <a href="https://github.com/Brevden" class="hover:text-forest-700 transition-colors">GitHub</a>
+        <a href="https://mastodon.social/@the_canopy" class="inline-flex items-center gap-1.5 bg-forest-900 text-cream px-4 py-1.5 rounded-full hover:bg-forest-700 transition-colors">
+          Follow
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════════════ HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <!-- Botanical background -->
+      <div class="absolute inset-0 pointer-events-none select-none">
+        <svg class="absolute top-0 right-0 w-[700px] h-[700px] opacity-[0.055] translate-x-1/4 -translate-y-1/4" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="280" cy="260" r="180" fill="#2d6b52"/>
+          <circle cx="160" cy="300" r="140" fill="#19372c"/>
+          <circle cx="400" cy="220" r="160" fill="#3c8769"/>
+          <circle cx="220" cy="170" r="110" fill="#2d6b52"/>
+          <circle cx="380" cy="330" r="130" fill="#19372c"/>
+          <circle cx="100" cy="380" r="90" fill="#3c8769"/>
+          <circle cx="460" cy="380" r="100" fill="#2d6b52"/>
+          <circle cx="310" cy="420" r="70" fill="#19372c"/>
+        </svg>
+        <svg class="absolute bottom-0 left-0 w-[500px] h-[500px] opacity-[0.04] -translate-x-1/3 translate-y-1/4" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="250" cy="220" r="160" fill="#2d6b52"/>
+          <circle cx="130" cy="260" r="120" fill="#19372c"/>
+          <circle cx="360" cy="200" r="140" fill="#3c8769"/>
+          <circle cx="200" cy="150" r="100" fill="#2d6b52"/>
+          <circle cx="350" cy="310" r="110" fill="#19372c"/>
+        </svg>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 bg-forest-100/70 text-forest-700 text-xs font-medium tracking-wide uppercase px-4 py-2 rounded-full mb-8 border border-forest-200/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-forest-500 inline-block"></span>
+          Open source · Self-hosted · Community run
+        </div>
+
+        <h1 class="font-display text-5xl md:text-7xl font-bold text-forest-900 leading-[1.08] tracking-tight">
+          Your home.<br />Your people.<br />
+          <span class="text-forest-600 italic">Your data.</span>
+        </h1>
+
+        <p class="mt-8 text-lg md:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
+          Canopy is a home server platform built around the people who live in your home.
+          Your films, your music, your household life — on your own hardware,
+          accessible wherever you go, in nobody's hands but yours.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#story" class="inline-flex items-center gap-2 bg-forest-700 text-cream px-7 py-3.5 rounded-full font-medium hover:bg-forest-600 transition-colors shadow-sm">
+            See how it works
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="https://github.com/Brevden" class="inline-flex items-center gap-2 text-stone-600 px-7 py-3.5 rounded-full font-medium hover:text-forest-700 transition-colors border border-stone-300 hover:border-forest-300">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ WHY -->
+    <section class="py-28 px-6 bg-forest-950">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-forest-500 text-sm font-medium uppercase tracking-widest mb-10">Why Canopy exists</p>
+
+        <div class="space-y-8 text-forest-300/80 leading-[1.85] text-[1.05rem] font-display">
+          <p>
+            The internet used to feel like it belonged to people. You'd stumble across a stranger's homepage about their train collection,
+            or a forum where people just helped each other with things. It was weird and generous and human.
+          </p>
+          <p>
+            That feeling is mostly gone. The spaces we share now are owned by companies whose business model is to keep us engaged,
+            harvest what they learn about us, and sell it. Our conversations, our relationships, our taste in music, our arguments —
+            all of it is raw material for someone else's profit. The platforms don't mediate our lives because they care about us.
+            They mediate our lives because attention is the product.
+          </p>
+          <p class="text-forest-200">We've handed over something important without quite noticing.</p>
+        </div>
+
+        <!-- The carnival -->
+        <div class="my-14 border-l-2 border-forest-600 pl-8">
+          <p class="font-display italic text-cream text-xl md:text-2xl leading-[1.65]">
+            Imagine you upload your holiday pictures to Facebook so your friends can see them together.
+            What you've actually done is taken your pictures and put them in a giant warehouse inside a carnival —
+            a carnival full of algorithmically targeted attractions, engineered to distract and keep people inside
+            as long as possible. Your friends have to wade through a stream of personalised, emotionally calibrated content
+            just to get to your photos.
+          </p>
+          <p class="font-display italic text-forest-400 text-xl md:text-2xl leading-[1.65] mt-6">
+            Your holiday pictures didn't belong in that warehouse. They're your pictures, and your friends
+            should see them in your house — metaphorically, and with Canopy, literally.
+          </p>
+        </div>
+
+        <div class="space-y-8 text-forest-300/80 leading-[1.85] text-[1.05rem] font-display">
+          <p>
+            Your home already has a router, a hard drive, a screen. It already stores your photos, your films, your music.
+            What it's missing is software that makes those things properly yours — accessible from anywhere, shareable with
+            people you actually trust, not contingent on any platform's continued existence or goodwill.
+          </p>
+          <p>
+            But self-hosting as it exists today requires real knowledge, real time, and real tolerance for things breaking.
+            Digital sovereignty shouldn't be a privilege reserved for people who already know what a reverse proxy is.
+            A person who just wants to stream their own films and share a recipe with their mum shouldn't have to learn
+            Linux networking to do it.
+          </p>
+          <p>
+            And self-sufficiency alone misses something. The most natural thing in the world is to share — a music collection,
+            a film library, a household calendar with a relative on another node. None of that requires a platform.
+            It just requires the pipes to connect people directly, without a middleman taking a cut of their attention.
+          </p>
+        </div>
+
+        <div class="mt-14 pt-10 border-t border-forest-800">
+          <p class="font-display italic text-forest-400 text-lg leading-relaxed max-w-2xl">
+            Solarpunk imagines futures where technology serves communities rather than extracting from them.
+            Canopy is a practical attempt at that, in a narrow domain. If it makes it easier for ordinary people
+            to own their media, communicate without being surveilled, and share with friends on their own terms —
+            that's worth doing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ STORY -->
+    <section id="story" class="py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">A home that travels with you</p>
+            <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight mb-8">
+              Everything at home. <em>Everywhere.</em>
+            </h2>
+            <div class="space-y-5 text-stone-600 leading-relaxed text-[1.05rem]">
+              <p>
+                Jessica has Canopy installed at home. She hosts her own films on Jellyfin,
+                her music on Navidrome, and her documents on Nextcloud — all running on her own hardware,
+                on her own hard drive.
+              </p>
+              <p>
+                When she leaves the house, her phone stays connected to her Atrium over WireGuard.
+                She can stream her films on the train, check the household calendar, and read messages
+                left on the noticeboard. No extra setup. No VPN to configure. No port forwarding.
+              </p>
+              <p class="text-forest-800 font-medium">
+                This is how Canopy works by default. Connectivity isn't a feature you configure —
+                it's simply how your Atrium behaves.
+              </p>
+            </div>
+          </div>
+
+          <!-- GUI mockup -->
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-forest-900/15 border border-stone-200/80 aspect-[4/3]">
+              <!-- Top bar (browser/OS chrome) -->
+              <div class="bg-stone-200 px-4 py-2.5 flex items-center gap-2">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-red-400/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-amber-400/60"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400/60"></div>
+                </div>
+                <div class="flex-1 mx-4 bg-white/60 rounded text-[10px] text-stone-400 px-3 py-1 text-center">atrium.home.canopy</div>
+              </div>
+              <!-- GUI interior -->
+              <div class="flex h-full bg-gradient-to-br from-stone-50 to-amber-50/30">
+                <!-- Sidebar -->
+                <div class="w-[28%] bg-stone-900 flex flex-col py-3 px-2">
+                  <div class="px-3 pb-3 mb-2 border-b border-stone-800">
+                    <div class="flex items-center gap-2">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-green-400">
+                        <path d="M12 3L6 10h12L12 3z"/>
+                        <path d="M12 7L4 15h16L12 7z"/>
+                        <rect x="10" y="15" width="4" height="5" rx="0.5"/>
+                      </svg>
+                      <div>
+                        <p class="text-stone-100 text-[9px] font-semibold leading-none">My Atrium</p>
+                        <p class="text-stone-500 text-[8px] mt-0.5">Jessica</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-0.5 px-1">
+                    {['Dashboard', 'Services', 'Devices', 'Nodes', 'Catalogue'].map((item, i) => (
+                      <div class={`px-2 py-1.5 rounded text-[9px] ${i === 1 ? 'bg-stone-800 text-green-400' : 'text-stone-500'}`}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <div class="mt-auto px-3 pb-1">
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                      <span class="text-stone-500 text-[8px]">Connected · On the train</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Content -->
+                <div class="flex-1 p-4">
+                  <p class="text-stone-400 text-[9px] uppercase tracking-widest mb-3 font-medium">Running Services</p>
+                  <div class="grid grid-cols-2 gap-2">
+                    {[
+                      { name: 'Jellyfin', desc: 'Films & TV', color: 'bg-violet-100 text-violet-700' },
+                      { name: 'Navidrome', desc: 'Music', color: 'bg-blue-100 text-blue-700' },
+                      { name: 'Nextcloud', desc: 'Files', color: 'bg-sky-100 text-sky-700' },
+                      { name: 'PiHole', desc: 'DNS · Ad block', color: 'bg-red-100 text-red-600' },
+                    ].map(s => (
+                      <div class="bg-white/70 rounded-lg p-2.5 border border-stone-100">
+                        <div class={`inline-block text-[8px] px-1.5 py-0.5 rounded font-medium mb-1 ${s.color}`}>{s.name}</div>
+                        <p class="text-stone-500 text-[8px]">{s.desc}</p>
+                        <div class="flex items-center gap-1 mt-1">
+                          <div class="w-1 h-1 rounded-full bg-green-500"></div>
+                          <span class="text-[7px] text-stone-400">running</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating badge -->
+            <div class="absolute -bottom-4 -right-4 bg-forest-700 text-cream text-xs px-4 py-2.5 rounded-xl shadow-lg font-medium">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                Accessible from anywhere
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════ FEATURES -->
+    <section class="py-24 px-6 bg-parchment/50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">What lives on your Atrium</p>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight">
+            Everything your household needs
+          </h2>
+          <p class="mt-4 text-stone-500 max-w-xl mx-auto">
+            Some features are built directly into the Atrium. Others run as containers you manage yourself. Both feel like home.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Atrium-native -->
+          <div class="bg-cream rounded-3xl p-8 border border-forest-100">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-9 h-9 rounded-xl bg-forest-100 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-forest-700">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-forest-900 text-lg">The Atrium</h3>
+                <p class="text-stone-400 text-xs">Built-in · No container · No account</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              {[
+                {
+                  icon: `<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>`,
+                  name: 'Household messaging',
+                  desc: 'A shared noticeboard for the people you live with. Real-time, no app required. "Dinner\'s ready." "Don\'t forget the bins."',
+                },
+                {
+                  icon: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>`,
+                  name: 'Shared calendar',
+                  desc: 'Your household\'s schedule, visible to everyone at home — and shareable with friends on connected Atriums.',
+                },
+                {
+                  icon: `<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>`,
+                  name: 'Recipes',
+                  desc: 'A household recipe book. Editable by anyone in the home. No ads, no paywalls, no "upgrade to save more than five recipes."',
+                },
+                {
+                  icon: `<polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>`,
+                  name: 'Chores',
+                  desc: 'A lightweight shared task list. Assignees, due dates, recurring tasks. Surfaces on the dashboard so nothing gets missed.',
+                },
+              ].map(f => (
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-forest-50 border border-forest-100 flex items-center justify-center mt-0.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="text-forest-600" set:html={f.icon}/>
+                  </div>
+                  <div>
+                    <p class="font-medium text-forest-900 text-sm mb-1">{f.name}</p>
+                    <p class="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="bg-forest-900 rounded-3xl p-8 text-cream">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-9 h-9 rounded-xl bg-forest-800 flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-forest-300">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                  <line x1="6" y1="6" x2="6.01" y2="6"/>
+                  <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-cream text-lg">Services</h3>
+                <p class="text-forest-400 text-xs">Containers you manage · Your choices</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              {[
+                {
+                  name: 'Movie & TV streaming',
+                  app: 'Jellyfin',
+                  desc: 'Your ripped films and TV shows, streamable on any device. No licensing deals. No "this content isn\'t available in your region."',
+                  tag: 'bg-violet-900/60 text-violet-300',
+                },
+                {
+                  name: 'Music streaming',
+                  app: 'Navidrome',
+                  desc: 'Your own music library — rips, purchases, whatever you own — streamable everywhere, exactly like Spotify but yours.',
+                  tag: 'bg-blue-900/60 text-blue-300',
+                },
+                {
+                  name: 'Files & documents',
+                  app: 'Nextcloud',
+                  desc: 'Your photos, documents, and backups on your own hardware. No model training on your files. No storage tiers.',
+                  tag: 'bg-sky-900/60 text-sky-300',
+                },
+                {
+                  name: 'Anything else',
+                  app: 'Any container',
+                  desc: 'Run any compatible container you like. The catalogue in the GUI makes discovery easy.',
+                  tag: 'bg-stone-700 text-stone-300',
+                },
+              ].map(s => (
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 pt-1">
+                    <span class={`text-[10px] font-medium px-2 py-0.5 rounded ${s.tag}`}>{s.app}</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-cream text-sm mb-1">{s.name}</p>
+                    <p class="text-forest-300/80 text-sm leading-relaxed">{s.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ MESH -->
+    <section id="the-mesh" class="py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Mesh diagram -->
+          <div class="order-2 lg:order-1">
+            <div class="bg-parchment/60 rounded-3xl p-8 border border-forest-100">
+              <svg viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <!-- Coordination server lines (dashed, faint) -->
+                <line x1="130" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
+                <line x1="350" y1="110" x2="240" y2="42" stroke="#8ec3a9" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
+
+                <!-- Main mesh link (A ↔ B) -->
+                <line x1="130" y1="110" x2="350" y2="110" stroke="#2d6b52" stroke-width="2" opacity="0.7"/>
+
+                <!-- Device links from A -->
+                <line x1="130" y1="110" x2="60" y2="220" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+                <line x1="130" y1="110" x2="160" y2="235" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+
+                <!-- Device link from B -->
+                <line x1="350" y1="110" x2="415" y2="218" stroke="#5fa385" stroke-width="1.5" opacity="0.6"/>
+
+                <!-- Coord server -->
+                <circle cx="240" cy="36" r="16" fill="#f0ebe0" stroke="#8ec3a9" stroke-width="1.5"/>
+                <text x="240" y="40" text-anchor="middle" font-size="8" fill="#3c8769" font-family="Inter, system-ui" font-weight="500">coord</text>
+
+                <!-- Node A: Jessica's Atrium -->
+                <circle cx="130" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
+                <text x="130" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Jessica</text>
+                <text x="130" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
+
+                <!-- Node B: Damien's Atrium -->
+                <circle cx="350" cy="110" r="28" fill="#19372c" stroke="#2d6b52" stroke-width="2"/>
+                <text x="350" y="107" text-anchor="middle" font-size="9" fill="#8ec3a9" font-family="Inter, system-ui" font-weight="600">Damien</text>
+                <text x="350" y="119" text-anchor="middle" font-size="7" fill="#5fa385" font-family="Inter, system-ui">Atrium</text>
+
+                <!-- Jessica's devices -->
+                <circle cx="60" cy="225" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+                <text x="60" y="229" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
+
+                <circle cx="165" cy="238" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+                <text x="165" y="242" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Laptop</text>
+
+                <!-- Damien's device -->
+                <circle cx="418" cy="222" r="16" fill="#f0ebe0" stroke="#5fa385" stroke-width="1.5"/>
+                <text x="418" y="226" text-anchor="middle" font-size="7.5" fill="#2d6b52" font-family="Inter, system-ui">Phone</text>
+
+                <!-- wg-mesh label -->
+                <text x="240" y="100" text-anchor="middle" font-size="8" fill="#5fa385" font-family="Inter, system-ui" opacity="0.9">wg-mesh</text>
+
+                <!-- wg-clients labels -->
+                <text x="85" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
+                <text x="395" y="175" text-anchor="middle" font-size="7" fill="#8ec3a9" font-family="Inter, system-ui" opacity="0.8">wg-clients</text>
+              </svg>
+
+              <div class="mt-4 flex flex-wrap gap-4 justify-center text-xs text-stone-500">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-0.5 bg-forest-600"></div>
+                  <span>Node mesh (WireGuard)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-0.5 bg-forest-400"></div>
+                  <span>Client devices</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-5 border-t border-dashed border-forest-300"></div>
+                  <span>Coordination server</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <p class="text-forest-600 text-sm font-medium uppercase tracking-widest mb-4">The mesh</p>
+            <h2 class="font-display text-4xl md:text-5xl font-semibold text-forest-900 leading-tight mb-8">
+              Connected to the people you choose.
+            </h2>
+            <div class="space-y-5 text-stone-600 leading-relaxed text-[1.05rem]">
+              <p>
+                Damien has his own Atrium, and a vast music collection. When Jessica adds him as a peer,
+                the two Atriums connect over an encrypted WireGuard mesh — directly, without any platform in the middle.
+              </p>
+              <p>
+                Damien can share parts of his music library with Jessica. Jessica can add Damien as a
+                user on her Jellyfin and he can watch her films. Each person decides what they share
+                and with whom.
+              </p>
+              <p class="text-forest-800 font-medium">
+                No servers you don't control. No permission to ask of anyone. Just a direct connection
+                between two homes, over an invite link sent through whatever channel you prefer.
+              </p>
+            </div>
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              {[
+                { stat: 'One link', label: 'to invite a peer node' },
+                { stat: 'No NAT', label: 'traversal to configure' },
+                { stat: 'Encrypted', label: 'end-to-end, always' },
+                { stat: 'Direct', label: 'no Canopy servers in the path' },
+              ].map(s => (
+                <div class="bg-forest-50 rounded-2xl p-4 border border-forest-100">
+                  <p class="font-display font-semibold text-forest-900 text-lg">{s.stat}</p>
+                  <p class="text-stone-500 text-sm mt-0.5">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 px-6 bg-forest-900">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-forest-400 text-sm font-medium uppercase tracking-widest mb-4">Under the surface</p>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold text-cream leading-tight">
+            Built right, from the ground up
+          </h2>
+          <p class="mt-4 text-forest-300/70 max-w-xl mx-auto">
+            Every layer of Canopy was chosen for a reason. Security, reproducibility, and openness aren't afterthoughts — they're the foundation.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Connecting line -->
+          <div class="absolute left-[calc(2rem+1px)] top-10 bottom-10 w-px bg-forest-700 hidden md:block"></div>
+
+          <div class="space-y-10">
+            {[
+              {
+                num: '1',
+                name: 'NixOS',
+                role: 'Operating System',
+                desc: 'A fully declarative Linux distribution. All system configuration is expressed in .nix files — reproducible, auditable, and shareable. Your server is exactly what the config says it is. Always.',
+                tag: 'Declarative · Reproducible',
+              },
+              {
+                num: '2',
+                name: 'Podman',
+                role: 'Container Runtime',
+                desc: 'Services run as isolated containers. Podman was chosen over Docker because it runs rootless — as its own unprivileged user — rather than as root. Each service is contained and self-sufficient.',
+                tag: 'Rootless · Isolated',
+              },
+              {
+                num: '3',
+                name: 'Rust Daemon',
+                role: 'System Layer',
+                desc: 'A Rust process that runs as root and handles all system-level operations: managing containers, configuring networking, executing system commands. It exposes a Unix socket. Nothing else touches the system.',
+                tag: 'Root · Unix socket',
+              },
+              {
+                num: '4',
+                name: 'Bun + TypeScript',
+                role: 'Management GUI',
+                desc: 'A web interface served by Bun, running as an unprivileged user. It communicates with the Daemon via the Unix socket. The code runs entirely on your machine — fully inspectable, fully customisable.',
+                tag: 'Unprivileged · Customisable',
+              },
+            ].map((layer, i) => (
+              <div class="relative flex gap-6 md:gap-10">
+                <div class="relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-forest-800 border border-forest-700 flex items-center justify-center">
+                  <span class="font-display font-bold text-forest-300 text-xl">{layer.num}</span>
+                </div>
+                <div class="flex-1 bg-forest-800/50 rounded-2xl p-6 border border-forest-700/50">
+                  <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                    <div>
+                      <h3 class="font-semibold text-cream text-lg">{layer.name}</h3>
+                      <p class="text-forest-400 text-sm">{layer.role}</p>
+                    </div>
+                    <span class="text-[10px] bg-forest-900/60 text-forest-400 px-2.5 py-1 rounded-full font-mono border border-forest-700/50">{layer.tag}</span>
+                  </div>
+                  <p class="text-forest-300/80 leading-relaxed">{layer.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════ FOOTER -->
+  <footer class="bg-forest-950 text-forest-400 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+        <div>
+          <div class="flex items-center gap-2.5 mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-forest-500">
+              <path d="M12 3L6 10h12L12 3z"/>
+              <path d="M12 7L4 15h16L12 7z"/>
+              <rect x="10" y="15" width="4" height="5" rx="0.5"/>
+            </svg>
+            <span class="font-display font-semibold text-cream text-lg tracking-tight">Canopy</span>
+          </div>
+          <p class="text-forest-500 text-sm max-w-xs leading-relaxed">
+            A home server platform for the people you actually live with.
+            Open source. Community run.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-10 gap-y-4 text-sm">
+          <div class="space-y-3">
+            <p class="text-forest-600 text-xs uppercase tracking-widest font-medium">Project</p>
+            <div class="space-y-2">
+              <a href="https://github.com/Brevden" class="block hover:text-cream transition-colors">GitHub</a>
+              <a href="https://mastodon.social/@the_canopy" class="block hover:text-cream transition-colors">Mastodon</a>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-forest-600 text-xs uppercase tracking-widest font-medium">Support</p>
+            <div class="space-y-2">
+              <a href="https://nlnet.nl" class="block hover:text-cream transition-colors">NLnet Foundation</a>
+              <a href="https://www.sovereigntechfund.de" class="block hover:text-cream transition-colors">Sovereign Tech Fund</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-forest-900 text-forest-700 text-xs">
+        Canopy is free and open source software.
+      </div>
+    </div>
+  </footer>
+</Layout>
