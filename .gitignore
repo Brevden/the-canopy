@@ -1,0 +1,10 @@
+# SSH keys — never commit these
+*.pub
+the-canopy-git
+
+# Environment / secrets
+.env
+.env.*
+
+# macOS
+.DS_Store
